@@ -1,0 +1,14 @@
+<form>
+    <mat-form-field>
+        <mat-label>Job</mat-label>
+        <input #input matInput [(ngModel)]="description" name="job">
+        <button mat-flat-button color="primary" (click)="addJob()">
+            <mat-icon>add</mat-icon> Adicionar
+        </button>/
+    </mat-form-field>
+</form>
+
+<mat-list>
+    <mat-list-item *ngFor="let job of jobs"> {{job.Description}} </mat-list-item>
+</mat-list>
+
