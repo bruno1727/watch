@@ -20,11 +20,16 @@ export class JobGroupComponent implements OnInit {
 
   addJob(){
     this.jobs.push({
-      Description: this.description
+      Description: this.description,
+      Time: {
+        milliseconds: 0
+      }
     });
   }
 
   getTotalTime(){
-    
+   let sum = 0;
+   this.jobs.forEach(j => sum += j.Time.milliseconds);
+   return sum;
   }
 }

@@ -1,1 +1,10 @@
-<p>job-group-item works!</p>
+<div>
+    <label>{{job.Description}}</label>
+    <button mat-flat-button color="primary" (click)="clock.start()">
+        <mat-icon>play_arrow</mat-icon>
+    </button>
+    <button mat-flat-button color="primary" (click)="clock.pause()">
+        <mat-icon>play_arrow</mat-icon>
+    </button>
+    <app-clock #clock [time]="job.Time"></app-clock>
+</div>

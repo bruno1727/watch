@@ -1,5 +1,6 @@
-import { Time } from '@angular/common';
+import { Time } from './time.model';
 
 export class Job {
     Description: string;
+    Time: Time;
 }
